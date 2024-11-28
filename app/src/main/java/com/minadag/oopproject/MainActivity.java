@@ -38,13 +38,34 @@ public class MainActivity extends AppCompatActivity {
          carName.year = 2023; // Private yapıldığında değiştirilemedigi icin hata verecek
         System.out.println(carName.year);
           */
-
         System.out.println(carName.getName());  // audi cıktısını verir
-
         carName.setName("BMW"); // set ile isim degistirdik
-
         System.out.println(carName.getName());
 
+        // inheritance
+
+        CarPlateNo minadag = new CarPlateNo("BMW",2024,"balck");
+
+        System.out.println(minadag.plate());
+        System.out.println(minadag.getName());
+
+        //Pholymorphizm
+
+        // static pholymorphizm
+
+        Mathematics sumTest = new Mathematics();
+        System.out.println(sumTest.sum());
+        System.out.println(sumTest.sum(5,6));
+        System.out.println(sumTest.sum(5, 6, 4));
+
+        // dynamic pholymorphism
+
+        Animals myAnimal = new Animals();
+        myAnimal.sing();
+
+        Dog pufy = new Dog();
+        pufy.sing();
+        pufy.text();
 
     }
 }
